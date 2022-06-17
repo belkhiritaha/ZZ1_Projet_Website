@@ -25,9 +25,8 @@ function blue() {
     swapTheme("blue");
     document.getElementById("particles-js").style.backgroundColor = "#add8e6";
     document.getElementById("pleasenav").style.backgroundColor = "#296178";
-    document.getElementById("sidebar").style.backgroundColor = "#a6ccf5";
-    document.getElementById("sidebar").style.backgroundColor = "#794ca6";
-    document.getElementById("pleasenav").style.backgroundColor = "#70518f";
+    document.getElementById("sidebar").style.backgroundColor = "rgb(72, 103, 137)";
+    document.getElementById("pleasenav").style.backgroundColor = "rgb(31,46,82)";
     document.getElementById("sidebar").style.color = "white";
 }
 
