@@ -10,8 +10,6 @@
     }
 }
 
-
-
 .container {
     position: relative;
     margin-left: 24%;
@@ -28,8 +26,7 @@
 @media (max-width: 500px) {
     .image {
         height: 40%;
-        width: 150%;
-        margin-left: -36%;
+        width: 50%;
     }
 }
 
@@ -293,10 +290,9 @@ h1 {
 }
 
 
-@media (max-width: 500px) {
-    h1 {
-        font-size: 200%;
-        margin-left: 6%;
+@media (max-width: 780px) {
+    h2 {
+        font-size: 80%;
     }
 }
 
@@ -391,16 +387,6 @@ p {
     #pleasenav {
         padding-bottom: 10%;
     }
-
-    #main {
-        width: 100%;
-        margin: 0;
-        padding-left: 1%;
-    }
-
-    #particles-js {
-        display: none;
-    }
 }
 
 @keyframes slide {
@@ -460,6 +446,11 @@ p {
     }
 }
 
+@media (min-width: 992px){
+    .col-lg-10 {
+        margin-left: 16%;
+    }
+}
 
 .navbar {
     margin-bottom: 0;
@@ -485,7 +476,11 @@ p {
     height: 100%;
     background-color: transparent;
     padding: 0;
+}
 
+.col-lg-12 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 
@@ -541,14 +536,13 @@ h2 {
 }
 
 #title {
-
-    padding-top: 15%;
+    margin-top: 25%;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
+    font-size: 8vw;
     text-transform: uppercase;
-    letter-spacing: 6px;
-    word-spacing: 2px;
-    font-size: 900%;
+    letter-spacing: 1%;
+    word-spacing: 2%;
     color: black;
     animation-name: end;
     animation-duration: 3s;
