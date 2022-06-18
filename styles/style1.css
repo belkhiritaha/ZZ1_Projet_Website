@@ -1,3 +1,12 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;  /* hide scrollbar IE & Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 .contimg {
     display: flex;
     z-index: -100;

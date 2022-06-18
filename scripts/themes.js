@@ -32,19 +32,17 @@ function blue() {
 
 function yellow() {
     swapTheme("yellow");
-    document.getElementById("particles-js").style.backgroundColor = "#f8c210";
-    document.getElementById("pleasenav").style.backgroundColor = "#ffc107";
-    document.getElementById("sidebar").style.backgroundColor = "#ffe083";
+    document.getElementById("particles-js").style.backgroundColor = "rgb(229 210 149)";
+    document.getElementById("pleasenav").style.backgroundColor = "rgb(167 125 0)";
+    document.getElementById("sidebar").style.backgroundColor = "rgb(219 190 101)";
     document.getElementById("sidebar").style.color = "black";
-    document.getElementById("yellow").style.animation = "btn-animate 300ms forwards";
-    document.getElementById("blue").style.animation = "none";
 }
 
 function red() {
     swapTheme("red");
-    document.getElementById("particles-js").style.backgroundColor = "red";
-    document.getElementById("pleasenav").style.backgroundColor = "#dc3545";
-    document.getElementById("sidebar").style.backgroundColor = "red";
+    document.getElementById("particles-js").style.backgroundColor = "rgb(247 137 137)";
+    document.getElementById("pleasenav").style.backgroundColor = "rgb(141 31 42)";
+    document.getElementById("sidebar").style.backgroundColor = "rgb(255 87 87)";
 }
 
 function brown() {
