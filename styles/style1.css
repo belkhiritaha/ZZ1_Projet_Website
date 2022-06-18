@@ -547,7 +547,7 @@ h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
     font-size: 8vw;
-    text-transform: uppercase;
+    text-transform: lowercase;
     letter-spacing: 1%;
     word-spacing: 2%;
     color: black;
