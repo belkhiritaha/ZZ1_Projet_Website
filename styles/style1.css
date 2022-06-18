@@ -27,6 +27,17 @@
     .image {
         height: 40%;
         width: 50%;
+        /* align in center of div */
+        margin-left: 25%;
+        margin-top: 5%;
+    }
+
+    .overlay {
+        height: 100%;
+        width: 50% !important;
+        margin-left: 25%;
+        position: absolute;
+        top: 0;
     }
 }
 
@@ -42,16 +53,6 @@
     -webkit-transform: scale(0);
     transition: .3s ease;
 
-}
-
-@media (max-width: 500px) {
-    .overlay {
-        height: 100%;
-        width: 150%;
-        margin-left: 50%;
-        position: absolute;
-        top: 0;
-    }
 }
 
 .container:hover .overlay {
@@ -448,7 +449,7 @@ p {
 
 @media (min-width: 992px){
     .col-lg-10 {
-        margin-left: 16%;
+        margin-left: 16.66%;
     }
 }
 
@@ -475,7 +476,8 @@ p {
 .col-lg-10 {
     height: 100%;
     background-color: transparent;
-    padding: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .col-lg-12 {
@@ -513,10 +515,6 @@ p {
 .blabla {
     width: 90%;
     margin: auto;
-}
-
-.row {
-    margin-right: 0;
 }
 
 .log-container {
