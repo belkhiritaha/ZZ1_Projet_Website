@@ -16,14 +16,14 @@ body {
 }
 
 .contimg {
-    width: 25%;
+    width: 50%;
     height: 25%;
     margin: auto;
 }
 
 .container {
     position: relative;
-    margin-left: 24%;
+    margin-left: auto;
     margin-top: 4%;
     width: 50%;
 }
@@ -198,7 +198,9 @@ footer>div {
 
 
 
-
+.example {
+    width: 100% !important;
+}
 
 
 
@@ -545,8 +547,7 @@ p {
 
 .container {
     padding: 0;
-    margin: auto;
-    width: 100%;
+    width: 300%;
 }
 
 h2 {
