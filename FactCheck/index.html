@@ -34,13 +34,13 @@
                         <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../FactCheck/index.html">Fact Checker</a>
+                        <a class="nav-link active" href="../FactCheck/index.html">Fact Checker</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../LoLImposter/index.php">LoL Imposters</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="../SDL2Raycasting/index.html">SDL2 Raycasting</a>
+                        <a class="nav-link" href="../SDL2Raycasting/index.html">SDL2 Raycasting</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../ZZ1_Projet/index.html">ZZ1 Project</a>
@@ -86,51 +86,122 @@
 
                 <div class="d-flex flex-column">
 
-                    <h2 id="title">SDL2 Raycasting</h2>
+                    <h2 id="title">Fact Checker</h2>
                     <img src="../img/angle-down-solid.svg" class="scroll">
 
                     <div class="p-2"
                         style="background-color: rgba(10, 10, 10, 0.2); width: 96%; margin: auto; border: 3px solid rgba(20, 20, 20, 0.1);">
 
 
-                        <p>A 3D game written in C (SDL2) using raycasting</p>
+                        <p>A program that checks if an information is fake or not</p>
                         <div class="Who">
                             <h1>Concept</h1>
                             <p>
-                                The game is a 3D game where the player can move around and shoot the enemies.
+                                Given a statement that illustrates a relationship between two entities, the program checks if the statement is true or false.
+                                It does so by building a knowledge graph, and looking for the shortest path between the two entities.
+                                A rather long path corresponds to a false statement, while a short path corresponds to a true statement.
                             </p>
                             <div class="contimg">
                                 <div>
                                     <div class="example container">
-                                        <img src="../img/raycastinggame.png" alt="Avatar" class="image">
+                                        <img src="../img/Figure-2-example-of-a-knowledge-graph.png" alt="Avatar" class="image">
                                         <div class="overlay">
-                                            <div class="text">screenshot of the game
+                                            <div class="text">example of a knowledge graph
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <p>On the example we can see that Barack Obama is directly linked to Michelle Obama, therefore, any statement directly linking
+                                    those two entities is likely to be true.
+                                </p>
                             </div>
                         </div>
 
-                        <h1>Raycasting</h1>
-                        <p>The goal is to simulate a 3D world, when actually the "world" is stored in a 2D array.</p>
+                        <h1>Algorithm</h1>
+                        <p>We start with the statement's first entity as the first node to our graph.
+                            We then make SQL queries from the Wikidata database to get all the entities that are linked to our first entity.
+                            We have now built a fist layer of entities that surrounds our first node.
+                        </p>
 
                         <div class="contimg">
                             <div>
                                 <div class="example container">
-                                    <img src="../img/raycastingmap2D.png" alt="Avatar" class="example image">
+                                    <img src="../img/1stlayer.png" alt="Avatar" class="example image">
                                     <div class="overlay">
-                                        <div class="text">the actual map
+                                        <div class="text">the 1st layer surrounding our starting entity
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <p>We can achieve that by casting multiple rays in the players FOV and calculating their length when they reach a wall.
-                            Their length gives us an idea on the distance between the player and the walls facing him, and thus the draw height of the wall.
+
+                        <br>
+                        
+                        <p>We reiterate this process for the stqtement's second entity, and we get a second layer of entities surrounding our second node.
+                            We reiterate this process for all the nodes on the first layer of entities, second layer, third...
+                            until the two separate graphs we're building connect.
+                            This process is not garanteed to terminate, so we must set a limit on the number of iterations upon which, we can say that 
+                            the statement is likely to be false, since there is no obvious link between the two entities.
                         </p>
 
-                        <a target="_blank" href="https://github.com/belkhiritaha/raycasting.git">
+                        <p>The resulting knowledge graph looks like this:</p>
+                        </p>
+
+                        <div class="contimg">
+                            <div>
+                                <div class="example container">
+                                    <img src="../img/kg.png" alt="Avatar" class="example image">
+                                    <div class="overlay">
+                                        <div class="text">the resulting knowledge graph
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <h1>Shortest path</h1>
+                        <p>In this graph, we look for the shortest path that connects the two entities. And given the weight of each edge, we can
+                            calculate the Truth Value of the statement.
+                        </p>
+
+                        <div class="contimg">
+                            <div>
+                                <div class="example container">
+                                    <img src="../img/pathexmpl.png" alt="Avatar" class="example image">
+                                    <div class="overlay">
+                                        <div class="text">Example of a path
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <h1>Truth Value</h1>
+                        <p>The Truth Value of the statement is defined as such:
+                        </p>
+
+                        <div class="contimg">
+                            <div>
+                                <div class="example container">
+                                    <img src="../img/truthvalue.png" alt="Avatar" class="example image">
+                                    <div class="overlay">
+                                        <div class="text">truth value
+                                        </div>
+                                    </div>
+                                    <p>Where K is a calibration function, and N is the paths length (sum of nodes weights)</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <a target="_blank" href="https://github.com/belkhiritaha/Fact-checker">
                             <img src="../img/25231.png" class ="link_image">
                         </a>
                         <p>(Source code)</p>
