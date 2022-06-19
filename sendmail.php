@@ -8,5 +8,10 @@
         'X-Mailer' => 'PHP/' . phpversion()
     );
 
-    mail($to, $subject, $message, $headers);
+    if (mail($to, $subject, $message, $headers)){
+        echo "Mail sent successfully";
+    }
+    else{
+        echo "Mail not sent";
+    }
  ?>
