@@ -332,6 +332,10 @@ h1::after {
 }
 
 
+.day {
+    text-align: center;
+}
+
 
 p {
     text-align: center;
