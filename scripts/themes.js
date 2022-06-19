@@ -53,4 +53,29 @@ function brown() {
     document.getElementById("sidebar").style.backgroundColor = "rgb(71, 71, 71)";
 }
 
+function show_logs(){
+    document.getElementById("logs").style.display = "block";
+    document.getElementById("logs_btn").classList.add("active");
+    document.getElementById("calendrier_btn").classList.remove("active");
+    document.getElementById("calendrier").style.display = "none";
+    document.getElementById("projet").style.display = "none";
+    document.getElementById("projet_btn").classList.remove("active");
+}
 
+function show_calendrier(){
+    document.getElementById("logs").style.display = "none";
+    document.getElementById("logs_btn").classList.remove("active");
+    document.getElementById("calendrier_btn").classList.add("active");
+    document.getElementById("calendrier").style.display = "block";
+    document.getElementById("projet").style.display = "none";
+    document.getElementById("projet_btn").classList.remove("active");
+}
+
+function show_projet(){
+    document.getElementById("logs").style.display = "none";
+    document.getElementById("logs_btn").classList.remove("active");
+    document.getElementById("calendrier_btn").classList.remove("active");
+    document.getElementById("calendrier").style.display = "none";
+    document.getElementById("projet").style.display = "block";
+    document.getElementById("projet_btn").classList.add("active");
+}

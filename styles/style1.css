@@ -196,13 +196,26 @@ footer>div {
     }
 }
 
+.logs {
+    display: none;
+}
 
+.calendrier {
+    display: none;
+}
 
 .example {
     width: 100% !important;
 }
 
-
+.buttons_row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10%;
+    margin-left:10%;
+    margin-right: 10%;
+    margin-top: 10%;
+}
 
 
 #icone {
