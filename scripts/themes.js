@@ -3,11 +3,14 @@ function setTheme() {
     if (preference == "blue") {
         blue();
     }
-    if (preference == "yellow") {
+    else if (preference == "yellow") {
         yellow();
     }
-    if (preference == "red") {
+    else if (preference == "red") {
         red();
+    }
+    else {
+        blue();
     }
 }
 
