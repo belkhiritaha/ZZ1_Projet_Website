@@ -70,6 +70,15 @@ body {
     transform: scale(1)
 }
 
+.gif {
+    transition: .3s ease;
+}
+
+.gif:hover {
+    transform: scale(1.75);
+}
+
+
 .text {
     color: white;
     font-size: 20px;
