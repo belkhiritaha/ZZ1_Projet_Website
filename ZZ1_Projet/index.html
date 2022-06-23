@@ -90,7 +90,7 @@
                     <div class="buttons_row">
                         <button type="submit" id="projet_btn" class="btn btn-primary active" onclick="show_projet()">À propos</button>
                         <button type="submit" id="logs_btn" class="btn btn-primary" onclick="show_logs()">Réalisations individuelles</button>
-                        <button type="submit" id="logs_btn" class="btn btn-primary">Première présentation</button>
+                        <button type="submit" id="firstPrese_btn" class="btn btn-primary" onclick="show_firstPrese()">Première présentation</button>
                         <button type="submit" id="logs_btn" class="btn btn-primary">Deuxième présentation</button>
                         <button type="submit" id="calendrier_btn" class="btn btn-primary" onclick="show_calendrier()">Calendrier</button>
                     </div>
@@ -102,12 +102,10 @@
                         <div class="logs" id="logs">
                             <p class="texte_antoine">
                                 Les codes de tous ces programmes sont  
-                                <a href="https://github.com/maberet/ProjetZZ1" target="_blank">ici</a>
+                                <a href="https://gitlab.isima.fr/maberet/ProjetZZ1" target="_blank">ici</a>
                                 (Git).
                             </p>
-                            <p class="texte_antoine" style="font-weight: bold;">
-                                X fenêtré : terminé. ✔️
-                            </p>
+                            <h1>X fenêtré : terminé. ✔️</h1>
                             <div class="contimg">
                                 <div class="example gif">
                                     <img src="../img/x_fenetre_belkhiri.gif" alt="Avatar" class="image">
@@ -127,9 +125,7 @@
                                 </div>
                             </div>
                             
-                            <p class="texte_antoine" style="font-weight: bold;">
-                                Pavé de serpents  : terminé. ✔️
-                            </p>
+                            <h1>Pavé de serpents  : terminé. ✔️</h1>
                             <div class="contimg">
                                 <div class="example gif">
                                     <img src="../img/snakes_belkhiri2.gif" alt="Avatar" class="image">
@@ -149,9 +145,7 @@
                                 </div>
                             </div>
 
-                            <p class="texte_antoine" style="font-weight: bold;">
-                                Animer des sprites : terminé. ✔️
-                            </p>
+                            <h1>Animer des sprites : terminé. ✔️</h1>
                             <div class="contimg">
                                 <div class="example gif">
                                     <img src="../img/animate_belkhiri.gif" alt="Avatar" class="image">
@@ -171,6 +165,58 @@
                                 </div>
                             </div>
                         </div>
+                        
+
+                        <div class="firstPrese" id="firstPrese">
+
+                            <h1>Jeu de la vie : terminé. ✔️</h1>
+                            <p class="texte_antoine" >
+                                <u>Forme de monde :</u> torique <br>
+                                <u>Règles d'évolution :</u> base de John Horton Conway <br> <br>
+                                <img src="/img/GameOfLife/Git_GameOfLife.gif" alt="" width="1000" height="500"> <br><br>
+                                <u>Organisation :</u> <br>
+                                Tous les membres du groupe ont fait la base du jeu de la vie (affichage de base, logique, etc)
+                                et nous avons ensuite prit le meilleur de chacun pour la version finale : <br>
+                                ➤ Taha a fait la grille torique, la détection des cycles et des états stables. <br>
+                                ➤ Marc a fait la sauvegarde dans un fichier. <br>
+                                ➤ Antoine a fait le chargement d'un fichier et le redimensionnement de la grille en cours de jeu
+                                (fonctionnalité non présente dans le jeu final car pleine écran). <br>
+                                <br>
+                                <u>Fonctionnalités réalisées :</u><br>
+                                ➤ configuration initiale entrée par l'utilisateur à la souris<br>
+                                ➤ possibilité de sauvegarder / charger une configuration<br>
+                                <img src="/img/GameOfLife/CE_niveau.png" alt="" width="300" height="300">
+                                <img src="/img/GameOfLife/CE_Charge.png" alt="" width="500" height="300"> <br>
+                                ➤ flèches du clavier pour accélérer / freiner l'animation<br>
+                                ➤ modification aisée des règles de transition <br>
+                                ➤ détection de "l'état est stable" qui affiche un message<br>
+                                <img src="/img/GameOfLife/CE_GameOfLife_GameStable.png" alt="" width="500" height="300"> <br>
+                                ➤ [optionnel] détection de cycle (si taille de grille inf. à 7)<br><br>
+                                <u>Comment jouer :</u> <br>
+                                ↑ & ↓ : choix taille grille<br>
+                                <img src="/img/GameOfLife/CE_GameOfLife_Menu_1.png" alt="" width="500" height="300">
+                                <img src="/img/GameOfLife/CE_GameOfLife_Menu_2.png" alt="" width="500" height="300"> <br>
+                                → : avance l'animation <br>
+                                s : sauvegarde grille dans map.txt<br>
+                                x : quitte le jeu<br><br>
+                                <u>Comment lancer le programme :</u> <br>
+                                ➤ classique : ./run <br>
+                                Avec le mode classique on passe par le menu où on peut choisir la taille de la grille de jeu. La grille
+                                commence totalement vide.<br>
+                                ➤ chargement : ./run --tailleGrille --fichier <br>
+                                Avec ce mode, on se retrouve directement face au jeu. La grille a la taille --tailleGrille et est remplie
+                                avec le fichier --fichier. La taille --tailleGrille et la taille de la grille dans --tailleGrille est
+                                vérifiée. <br><br>
+                            </p>
+                            
+                            <h1>Chef d’œuvre : terminé. ✔️</h1>
+                            <p class="texte_antoine" >
+                                sdqsdd
+                            </p>
+
+                        </div>
+
+
 
                         <div class="calendrier" id="calendrier">
                             <table class="table table-bordered">
@@ -230,7 +276,7 @@
                                 <h1>Liens</h1>
                                 <p class="texte_antoine">
                                     Git : 
-                                    <a href="https://github.com/maberet/ProjetZZ1" target="_blank">ici</a>
+                                    <a href="https://gitlab.isima.fr/maberet/ProjetZZ1" target="_blank">ici</a>
                                     et 
                                     Trello : 
                                     <a href="https://trello.com/b/YGhNeYX3/projet-apprentissage-par-renforcement" target="_blank"> là</a>
@@ -240,25 +286,17 @@
                                 <p class="texte_antoine">
                                     X fenêtré : terminé. ✔️ <br>
                                     Pavé de serpents  : terminé. ✔️ <br>
-                                    Jeu de la vie : terminé. <a href="" target="_blank">(voir ici)</a> ✔️ <br>
+                                    Jeu de la vie : terminé. ✔️ <br>
                                     Animer des sprites : terminé. ✔️ <br>
-                                    Chef d’œuvre : en cours. <a href="" target="_blank">(voir ici)</a> <br>
-                                    Jeu avec apprentissage par renforcement : à faire. <a href="" target="_blank">(voir ici)</a></p>
+                                    Chef d’œuvre : encours. <br>
+                                    Jeu avec apprentissage par renforcement : à faire. <br>
+                                </p>
                             </table>
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
-
-
-
-
-
-
     </div>
 
 </body>
