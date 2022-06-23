@@ -103,8 +103,10 @@
                             <p class="texte_antoine">
                                 Les codes de tous ces programmes sont  
                                 <a href="https://gitlab.isima.fr/maberet/ProjetZZ1" target="_blank">ici</a>
-                                (Git).
-                            </p>
+                                (Git). <br>
+                                <img src="/img/GameOfLife/CE_ArchiGit_Indi.png" alt=""><br>
+                            </p> <br>
+                            
                             <h1>X fenêtré : terminé. ✔️</h1>
                             <div class="contimg">
                                 <div class="example gif">
@@ -211,11 +213,13 @@
                             
                             <h1>Chef d’œuvre : terminé. ✔️</h1>
                             <p style="text-align: justify; text-justify: inter-word;" class="texte_antoine">
+                                <img src="/img/Photo_Sam/Gif_MatPompier.gif" alt=""><br>
                                 <u>Objectifs du chef d’œuvre :</u> <br>
                                 Mettre en œuvre tout ce qui a été vu sur la SDL, en créant un mini jeu.
                                 Nous proposons un jeu totalement différent (validé par l'enseignant).
                                 Ce n'est qu'un exercice et il ne faudrait pas lui accorder plus d'une journée : nous avons passé 2 jours sur cet exercice.
-                                Notre jeu mets en œuvre une chaîne de Markov afin de gérer le comportement d'au moins un élément du jeu (le feu). <br> <br> 
+                                Notre jeu mets en œuvre une chaîne de Markov afin de gérer le comportement d'au moins un élément du jeu (le feu). <br> 
+                                <img src="/img/Photo_Sam/Menu.png" width="1000" height="600" alt=""><br> <br>
                                 <u>But du jeu :</u> <br>
                                 Empêcher la propagation du feu en éteignant les flammes avec vos seaux d'eau. <br> <br>
                                 <u>Chaîne de Markov :</u> <br>
@@ -247,8 +251,10 @@
                                 séparé le travail comme suit : <br>
                                 ➤ Taha Belkhiri : toute la partie visuelle (carte, assets, menu, dessins, implémentations) et les animations. <br>
                                 ➤ Marc Beret : structure et mécanique du feu; chaîne de Markov; propagation du feu. <br>
-                                ➤ Antoine Meyer : logique du personnage (collisions); gestion du clic et de ses actions possibles. 
-                                <br> <br>
+                                ➤ Antoine Meyer : logique du personnage (collisions); gestion du clic et de ses actions possibles. <br>
+                                <img src="/img/Photo_Sam/CE_ArchiGit_Groupe.png" alt=""> →
+                                <img src="/img/Photo_Sam/CE_orgaTravail.png" alt=""><br>
+                                <br>
                                 <u>Modélisation :</u> <br>
                                 Chaque élément du jeu doit être modélisé. Voilà nos modélisations (non exhaustives) de nos
                                 principaux éléments : <br>
@@ -269,12 +275,30 @@
                                 perd un seau d’eau inutilement donc attention ! <br>
                                 <img src="/img/Photo_Sam/eteintproche.png" alt="">
                                 <img src="/img/Photo_Sam/eteintloin.png" alt=""> <br>
-                                -> eteindre le feux  <br>
-                                -> remplir les seaux  <br>
-                                -> perdre de la vie  <br>
-                                -> gagner du score <br>
-                                -> conditions de victoire : eteindre tous les feux (pas ecrans de victoire car temps)  <br>
-                                -> conditions de defaite : vie du pompier a 0 (ecran pour recommencer ou quitter) <br> <br>
+                                ➤ remplir les seaux : Quand Mat se trouve à une case de portée d’une
+                                source d’eau il peut remplir ses seaux en cliquant sur l’eau.<br>
+                                <img src="/img/Photo_Sam/rechargeeau.png" alt="">
+                                <img src="/img/Photo_Sam/fullEau.png" alt="">
+                                <img src="/img/Photo_Sam/fullEaunon.png" alt=""><br>
+                                ➤ vie du pompier : Mat le pompier dispose de 3 point de vie. Il en perd
+                                un à chaque fois qu’il entre en collision avec un feu.<br>
+                                <img src="/img/Photo_Sam/Fullvie.png" alt="">
+                                <img src="/img/Photo_Sam/Fullvienon.png" alt=""><br>
+                                ➤ collisions : Mat le pompier ne peut pas traverser des arbres ou marcher sur l’eau.
+                                Il ne peut pas non plus sortir de la carte. <br>
+                                ➤ prochain feu : Un timer annonce la prochaine évolution des feux (vague de propagation
+                                du feu, augmentation du feu, diminution du feu, etc). <br>  
+                                <img src="/img/Photo_Sam/feusuivant.png" alt=""><br>
+                                ➤ score : Chaque feu éteint correspond à un point. <br>
+                                <img src="/img/Photo_Sam/score.png" alt=""><br>
+                                ➤ conditions de victoire : Mat gagne quand il a éteint tous les feux.
+                                Le score est le nombre de feux éteints : il doit être le plus petit possible.
+                                Nous n'avons pas eu le temps de faire un écran de victoire.. <br>
+                                ➤ conditions de défaite : Le joueur perd si Mat n'a plus aucuns points de vie.
+                                Il arrive alors sur un écran de défaite et peut choisir de recommencer une partie
+                                ou de quitter le jeu. <br>
+                                <img src="/img/Photo_Sam/perdu.png" width="1000" height="600" alt=""> <br>
+                                
                             </p>
                         </div>
 
