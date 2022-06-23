@@ -170,7 +170,7 @@
                         <div class="firstPrese" id="firstPrese">
 
                             <h1>Jeu de la vie : terminé. ✔️</h1>
-                            <p class="texte_antoine" >
+                            <p style="text-align: justify; text-justify: inter-word;" class="texte_antoine">
                                 <u>Forme de monde :</u> torique <br>
                                 <u>Règles d'évolution :</u> base de John Horton Conway <br> <br>
                                 <img src="/img/GameOfLife/Git_GameOfLife.gif" alt="" width="1000" height="500"> <br><br>
@@ -210,15 +210,80 @@
                             </p>
                             
                             <h1>Chef d’œuvre : terminé. ✔️</h1>
-                            <p class="texte_antoine" >
-                                sdqsdd
+                            <p style="text-align: justify; text-justify: inter-word;" class="texte_antoine">
+                                <u>Objectifs du chef d’œuvre :</u> <br>
+                                Mettre en œuvre tout ce qui a été vu sur la SDL, en créant un mini jeu.
+                                Nous proposons un jeu totalement différent (validé par l'enseignant).
+                                Ce n'est qu'un exercice et il ne faudrait pas lui accorder plus d'une journée : nous avons passé 2 jours sur cet exercice.
+                                Notre jeu mets en œuvre une chaîne de Markov afin de gérer le comportement d'au moins un élément du jeu (le feu). <br> <br> 
+                                <u>But du jeu :</u> <br>
+                                Empêcher la propagation du feu en éteignant les flammes avec vos seaux d'eau. <br> <br>
+                                <u>Chaîne de Markov :</u> <br>
+                                Notre chaîne de Markov se déploie sur le comportement du feu.
+                                Il y a 5 états pour un feu : <br>
+                                ➤ s'éteint <br>
+                                ➤ étincelle <br>
+                                ➤ petit feu <br>
+                                ➤ feu fort <br>
+                                ➤ se propage <br> <br>
+                                Un tableau de Markov pour l'évolution du feu peut être comme ceci : <br>
+                                <img src="/img/Photo_Sam/CE_TableauMarkov.png" alt=""> <br>
+                                Le tableau dans le programme est généré depuis le fichier texte markov.txt. <br> <br>
+                                Détaillons une ligne de ce tableau. Prenons la ligne Étincelle (1).
+                                Elle modélises qu'une Étincelle (1) à 30% de chance de rester une Étincelle (1) et
+                                70% de devenir un Petit feu (2). Nous avons remplis ce tableau afin d'approcher une 
+                                forme de comportement réel tout en donnant du challenge aux joueurs. <br> <br>
+                                <u>S'éteindre (0) et Se propage (4) :</u> <br>
+                                Un feu peut être éteint (0) et existé ! Il modélise un départ de feu soudain.
+                                L'état Se propage (4) modélise la multiplication du feu. Dans cet état, le feu
+                                a une probabilité uniforme de se propager en croix autour de lui. Il est effectivement
+                                créé s'il n'y a pas déjà un feu ou une source d'eau !
+                                <img src="/img/Photo_Sam/feuavantspread.png" alt=""> 
+                                →
+                                <img src="/img/Photo_Sam/feuapresspread.png" alt=""> 
+                                <br> <br>
+                                <u>Organisation de l'équipe :</u> <br>
+                                Nous avons travaillé avec Git et l'utilisation des branches. Nous avons rapidement
+                                séparé le travail comme suit : <br>
+                                ➤ Taha Belkhiri : toute la partie visuelle (carte, assets, menu, dessins, implémentations) et les animations. <br>
+                                ➤ Marc Beret : structure et mécanique du feu; chaîne de Markov; propagation du feu. <br>
+                                ➤ Antoine Meyer : logique du personnage (collisions); gestion du clic et de ses actions possibles. 
+                                <br> <br>
+                                <u>Modélisation :</u> <br>
+                                Chaque élément du jeu doit être modélisé. Voilà nos modélisations (non exhaustives) de nos
+                                principaux éléments : <br>
+                                ➤ le pompier : position (x,y); nombre de seaux d'eau courant; vitesse de déplacement; nombre de points
+                                de vie courant; dernière fois qu'il a touché le feu. <br>
+                                ➤ le feu : position (x,y); état (étincelle, petit feu, etc).<br>
+                                ➤ liste chaînée des feux courants : structure de feu; pointeur sur chainon suivant. <br>
+                                ➤ la carte : générée depuis le fichier map.txt; dimension (20 cases par 20). <br>
+                                <br>
+                                <u>Animation :</u> <br>
+                                ➤ le pompier a 3 animations : Se déplace, Immobile et Vient de subir des brûlures.<br>
+                                ➤ le feu a différentes tailles suivant son état.<br>
+                                ➤ les points de vie ont une petite animation de mouvement.<br>
+                                <br>
+                                <u>Règles :</u> <br>
+                                ➤ éteindre le feu : Mat le pompier ne peut éteindre le feu que dans un rayon de
+                                une case autour de lui. Si jamais le joueur clique sur une case non accessible, il
+                                perd un seau d’eau inutilement donc attention ! <br>
+                                <img src="/img/Photo_Sam/eteintproche.png" alt="">
+                                <img src="/img/Photo_Sam/eteintloin.png" alt=""> <br>
+                                -> eteindre le feux  <br>
+                                -> remplir les seaux  <br>
+                                -> perdre de la vie  <br>
+                                -> gagner du score <br>
+                                -> conditions de victoire : eteindre tous les feux (pas ecrans de victoire car temps)  <br>
+                                -> conditions de defaite : vie du pompier a 0 (ecran pour recommencer ou quitter) <br> <br>
                             </p>
-
                         </div>
 
 
 
                         <div class="calendrier" id="calendrier">
+                            <img src="/img/trello/CE_Trello_lundi20.png" alt="" width="400" height="1200">
+
+
                             <table class="table table-bordered">
                                 <thead>
                                   <tr>
@@ -288,7 +353,7 @@
                                     Pavé de serpents  : terminé. ✔️ <br>
                                     Jeu de la vie : terminé. ✔️ <br>
                                     Animer des sprites : terminé. ✔️ <br>
-                                    Chef d’œuvre : encours. <br>
+                                    Chef d’œuvre : terminé. ✔️ <br>
                                     Jeu avec apprentissage par renforcement : à faire. <br>
                                 </p>
                             </table>
