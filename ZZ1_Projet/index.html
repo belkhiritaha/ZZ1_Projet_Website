@@ -306,6 +306,8 @@
                 
                             <h1>Jeu avec apprentissage par renforcement : terminé ✔️</h1>
                             <p style="text-align: justify; text-justify: inter-word;" class="texte_antoine">
+                                [gif mega cool du jeu]
+                                <br> <br>
                                 🎾 Raison d'être du jeu
                                 <br>
                                 Réinvestir les acquis de la première phase afin de créer un prototype de
@@ -316,6 +318,8 @@
                                 <br>
                                 Un match de tennis sans rebonds.
                                 Un joueur humain affronte une intelligence artificielle entrainée à renvoyer la balle.
+                                <br>
+                                [capture cool du jeu]
                                 <br><br>
                                 🎾 Visuel du jeu
                                 <br>
@@ -323,13 +327,13 @@
                                 Nous avons décidé de faire tout le rendu visuel de notre jeu en 3D en utilisant cette technique. Cela rajoute
                                 un challenge mathématique, le raycasting fonctionnant avec beaucoup de trigonométrie.
                                 <br> 
-                                <img src="/img/apprentissage_tennis_projet/raycasting_schema.png" width="" height="" alt="">                                
+                                <img class="gif" src="/img/apprentissage_tennis_projet/raycasting_schema.png" width="" height="" alt="">                                
                                 <br><br>
                                 🎾 Chronologie & Organisation
                                 <br>
                                 Chronologie générale :
                                 <br>
-                                <img src="/img/apprentissage_tennis_projet/chronologie_projet_tennis.png" width="" height="" alt="">
+                                <img class="gif" src="/img/apprentissage_tennis_projet/chronologie_projet_tennis.png" width="" height="" alt="">
                                 <br> <br>
                                 Organisation de l'équipe :
                                 <br>
@@ -337,15 +341,15 @@
                                 séparé le travail comme suit. Pour plus de détails voir notre Trello
                                 <a href="https://trello.com/b/YGhNeYX3/projet-apprentissage-par-renforcement" target="_blank"> ici</a>.
                                 <br>
-                                ➤ Taha Belkhiri : toute la partie visuelle (rendu 3D, carte, assets) et implémentation de l'IA.
+                                ➤ Taha Belkhiri : toute la partie visuelle (rendu 3D, carte, assets) et plug de l'IA.
                                 <br>
-                                ➤ Marc Beret : mathématique des trajectoires; entrainements de l'IA grâce à l'apprentissage par renforcement.
+                                ➤ Marc Beret : mathématique des trajectoires; création et entrainements de l'IA grâce à l'apprentissage par renforcement.
                                 <br>
                                 ➤ Antoine Meyer : logique des acteurs (collisions, déplacements); rendu 2D et ses courbes; page web.
                                 <br> <br>
                                 🎾 Structure du code
                                 <br>
-                                <img src="/img/apprentissage_tennis_projet/projet_tennis_strucGIt.png" alt="">
+                                <img class="gif" src="/img/apprentissage_tennis_projet/projet_tennis_strucGIt.png" alt="">
                                 <br>
                                 [screen branches dans gitlab]
                                 <br> <br>
@@ -357,13 +361,13 @@
                                 joue sur la partie gauche et l'IA joue à droite. L'axe horizontal est l'axe des x croissants.
                                 L'axe vertical est l'axe des y croissants.
                                 <br>
-                                <img src="/img/apprentissage_tennis_projet/projet_tennis_map_texte.png" alt="">
+                                <img class="gif" src="/img/apprentissage_tennis_projet/projet_tennis_map_texte.png" alt="">
                                 <br> <br>
                                 À partir de cette lecture, nous avons pu créer plusieurs vues de la carte de jeu.
                                 <br>
                                 ➤ Deux vues 2D avec une vue de haut et une vue de côté.
                                 <br>
-                                <img src="/img/apprentissage_tennis_projet/render_2d_2.gif" width="750" height="581,25" alt="">
+                                <img class="gif" src="/img/apprentissage_tennis_projet/render_2d_2.gif" width="750" height="581,25" alt="">
                                 <br> <br>
                                 ➤ Une vue 3D avec la technique du raycasting.
                                 <br>
@@ -375,28 +379,68 @@
                                 <br>
                                 Faire apprendre à notre intelligence artificielle à se mouvoir dans son espace de jeu, voir la balle arriver et bien se 
                                 placer pour être capable de renvoyer la balle.
+                                <br> <br>    
+                                Principe de fonctionnement : 
+                                <br>
+                                Nous avons découpés notre zone de jeu en 4 zones.
+                                L’IA doit apprendre à se positionner dans la bonne zone
+                                pour attraper la balle. Le déplacement de l’IA est libre
+                                dans toute sa partie du terrain.
+                                <br>
+                                <img class="gif" src="/img/apprentissage_tennis_projet/projet_tennis_decoupage_zone.png" alt="">
                                 <br> <br>
                                 Liste des actions possibles :
                                 <br>
-                                [screen tableau]
+                                <img class="gif" src="/img/apprentissage_tennis_projet/projet_tennis_actions_agent.png" alt="">
                                 <br> <br>
-                                Liste des perceptions et états possibles de l'agent :
+                                Liste des perceptions et états possible de l'agent :
                                 <br>
-                                [screen tableau]
+                                L’agent a plusieurs perceptions pour prendre ses décisions. Il connaît la zone dans laquelle il
+                                se trouve actuellement, zone_agent (4 zones possible); la zone de départ de la balle qu’il va
+                                devoir attraper, zone_balle_départ (4 zones possible); l’angle à plat de départ de la
+                                balle, angle_plat_balle_départ en ° (5 angles à plat); l’angle en hauteur de départ de la
+                                balle, angle_hauteur_balle_départ en ° (3 angles en hauteur). Nous avons donc 4 * 4 * 5 * 3 = 240 états.
+                                <br>
+                                <img class="gif" src="/img/apprentissage_tennis_projet/projet_tennis_tableau_etats.png" alt="">                                
                                 <br> <br>
                                 🎾 Touches et informations en vrac sur le jeu
                                 <br>
-                                Touches du jeu :
+                                Contrôles :
                                 <br>
-                                ZQSD => déplacements, H => HUB, B => BALLE
+                                touches ZQSD => déplace le joueur
+                                <br>
+                                touche H => affiche/masque le hub 
+                                <br>
+                                touche B => repositionne la balle devant le joueur
+                                <br>
+                                souris => oriente le regard du joueur, destination de la future frappe
+                                <br>
+                                clic gauche => tire dans la balle, jauge la puissance du tire avec durée d'appuie
                                 <br> <br>
                                 Mini-map :
                                 <br>
                                 La mini map est une vue de dessus 2D du jeu.
                                 <br>
-                                [capture ecran jeu et specifiquement la mini-map]
+                                <img class="gif" src="/img/apprentissage_tennis_projet/gi_minimap_tennis.gif" alt="">  
                                 <br>
-                                Le carré rouge correspond a ...........
+                                Le carré bleu est le joueur. Le carré rouge correspond à l'IA.
+                                Le carré vert est la balle. Le rectangle bleu est la zone limite du terrain.
+                                Le rectangle blanc est le filet. Les rays jaunes sont les rays pour
+                                faire la vue 3D. La barre rouge correspond au x du tir du joueur. 
+                                <br> <br>
+                                🎾 Historique des graphismes
+                                <br>
+                                <img class="gif" src="" alt="">  
+                                <br>
+                                <i>Graphismes n°1 </i>
+                                <br> <br>
+                                <img class="gif" src="" alt="">  
+                                <br>
+                                <i>Graphismes n°2 </i>
+                                <br> <br>
+                                <img class="gif" src="" alt="">  
+                                <br>
+                                <i>Graphismes n°3 </i>
                                 <br> <br>
                                 🎾 Idées non réalisées et pistes d'améliorations
                                 <br>
