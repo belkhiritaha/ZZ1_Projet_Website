@@ -66,6 +66,8 @@ function show_logs(){
     document.getElementById("firstPrese_btn").classList.remove("active");
     document.getElementById("projet").style.display = "none";
     document.getElementById("projet_btn").classList.remove("active");
+    document.getElementById("secondPrese").style.display = "none";
+    document.getElementById("secondPrese_btn").classList.remove("active");
 }
 
 function show_calendrier(){
@@ -78,6 +80,8 @@ function show_calendrier(){
     document.getElementById("firstPrese_btn").classList.remove("active");
     document.getElementById("projet").style.display = "none";
     document.getElementById("projet_btn").classList.remove("active");
+    document.getElementById("secondPrese").style.display = "none";
+    document.getElementById("secondPrese_btn").classList.remove("active");
 }
 
 function show_projet(){
@@ -90,6 +94,8 @@ function show_projet(){
     document.getElementById("calendrier_btn").classList.remove("active");
     document.getElementById("firstPrese").style.display = "none";
     document.getElementById("firstPrese_btn").classList.remove("active");
+    document.getElementById("secondPrese").style.display = "none";
+    document.getElementById("secondPrese_btn").classList.remove("active");
 }
 
 function show_firstPrese(){
@@ -102,4 +108,20 @@ function show_firstPrese(){
     document.getElementById("calendrier_btn").classList.remove("active");
     document.getElementById("projet").style.display = "none";
     document.getElementById("projet_btn").classList.remove("active");
+    document.getElementById("secondPrese").style.display = "none";
+    document.getElementById("secondPrese_btn").classList.remove("active");
+}
+
+function show_secondPrese(){
+    document.getElementById("secondPrese").style.display = "block";
+    document.getElementById("secondPrese_btn").classList.add("active");
+
+    document.getElementById("logs").style.display = "none";
+    document.getElementById("logs_btn").classList.remove("active");
+    document.getElementById("calendrier").style.display = "none";
+    document.getElementById("calendrier_btn").classList.remove("active");
+    document.getElementById("projet").style.display = "none";
+    document.getElementById("projet_btn").classList.remove("active");
+    document.getElementById("firstPrese").style.display = "none";
+    document.getElementById("firstPrese_btn").classList.remove("active");
 }

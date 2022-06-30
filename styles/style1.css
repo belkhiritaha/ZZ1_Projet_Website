@@ -217,6 +217,17 @@ footer>div {
     display: none;
 }
 
+/* seconde présentation */
+
+.secondPrese {
+    display: none;
+}
+
+.p-2 .secondPrese{
+    background-color: #11f53b8d;
+    padding: .3rem #ffffff;
+}
+
 .example {
     width: 100% !important;
 }

@@ -91,7 +91,7 @@
                         <button type="submit" id="projet_btn" class="btn btn-primary active" onclick="show_projet()">À propos</button>
                         <button type="submit" id="logs_btn" class="btn btn-primary" onclick="show_logs()">Réalisations individuelles</button>
                         <button type="submit" id="firstPrese_btn" class="btn btn-primary" onclick="show_firstPrese()">Première présentation</button>
-                        <button type="submit" id="logs_btn" class="btn btn-primary">Deuxième présentation</button>
+                        <button type="submit" id="secondPrese_btn" class="btn btn-primary" onclick="show_secondPrese()">Deuxième présentation</button>
                         <button type="submit" id="calendrier_btn" class="btn btn-primary" onclick="show_calendrier()">Calendrier</button>
                     </div>
                     <img src="../img/angle-down-solid.svg" class="scroll">
@@ -302,11 +302,122 @@
                             </p>
                         </div>
 
-
+                        <div class="secondPrese" id="secondPrese">
+                
+                            <h1>Jeu avec apprentissage par renforcement : terminé ✔️</h1>
+                            <p style="text-align: justify; text-justify: inter-word;" class="texte_antoine">
+                                🎾 Raison d'être du jeu
+                                <br>
+                                Réinvestir les acquis de la première phase afin de créer un prototype de
+                                notre propre « jeu vidéo » respectant la thématique du projet : apprentissage
+                                par renforcement ou Q-learning, méthode « essai-erreur ».
+                                <br> <br>
+                                🎾 Principe du jeu 
+                                <br>
+                                Un match de tennis sans rebonds.
+                                Un joueur humain affronte une intelligence artificielle entrainée à renvoyer la balle.
+                                <br><br>
+                                🎾 Visuel du jeu
+                                <br>
+                                Le raycasting est une technique de rendu permettant de créer une perspective 3D dans une carte 2D.
+                                Nous avons décidé de faire tout le rendu visuel de notre jeu en 3D en utilisant cette technique. Cela rajoute
+                                un challenge mathématique, le raycasting fonctionnant avec beaucoup de trigonométrie.
+                                <br> 
+                                <img src="/img/apprentissage_tennis_projet/raycasting_schema.png" width="" height="" alt="">                                
+                                <br><br>
+                                🎾 Chronologie & Organisation
+                                <br>
+                                Chronologie générale :
+                                <br>
+                                <img src="/img/apprentissage_tennis_projet/chronologie_projet_tennis.png" width="" height="" alt="">
+                                <br> <br>
+                                Organisation de l'équipe :
+                                <br>
+                                Nous avons travaillé avec Git et l'utilisation des branches. Nous avons rapidement
+                                séparé le travail comme suit. Pour plus de détails voir notre Trello
+                                <a href="https://trello.com/b/YGhNeYX3/projet-apprentissage-par-renforcement" target="_blank"> ici</a>.
+                                <br>
+                                ➤ Taha Belkhiri : toute la partie visuelle (rendu 3D, carte, assets) et implémentation de l'IA.
+                                <br>
+                                ➤ Marc Beret : mathématique des trajectoires; entrainements de l'IA grâce à l'apprentissage par renforcement.
+                                <br>
+                                ➤ Antoine Meyer : logique des acteurs (collisions, déplacements); rendu 2D et ses courbes; page web.
+                                <br> <br>
+                                🎾 Structure du code
+                                <br>
+                                <img src="/img/apprentissage_tennis_projet/projet_tennis_strucGIt.png" alt="">
+                                <br>
+                                [screen branches dans gitlab]
+                                <br> <br>
+                                🎾 Carte du jeu : 2D et 3D
+                                <br>
+                                Notre espace de jeu est un espace en deux dimensions (2D) lu à partir d'un fichier texte.
+                                Les valeurs 1 correspondent à la foule et représentent les limites du terrain.
+                                Les valeurs 2, 3 et 4 correspondent aux bords et milieu du filet. Le joueur humain
+                                joue sur la partie gauche et l'IA joue à droite. L'axe horizontal est l'axe des x croissants.
+                                L'axe vertical est l'axe des y croissants.
+                                <br>
+                                <img src="/img/apprentissage_tennis_projet/projet_tennis_map_texte.png" alt="">
+                                <br> <br>
+                                À partir de cette lecture, nous avons pu créer plusieurs vues de la carte de jeu.
+                                <br>
+                                ➤ Deux vues 2D avec une vue de haut et une vue de côté.
+                                <br>
+                                <img src="/img/apprentissage_tennis_projet/render_2d_2.gif" width="750" height="581,25" alt="">
+                                <br> <br>
+                                ➤ Une vue 3D avec la technique du raycasting.
+                                <br>
+                                [screen taha 3D]
+                                <br> <br>
+                                🎾 Apprentissage par renforcement grâce au Q-learning
+                                <br>
+                                Définition du problème :
+                                <br>
+                                Faire apprendre à notre intelligence artificielle à se mouvoir dans son espace de jeu, voir la balle arriver et bien se 
+                                placer pour être capable de renvoyer la balle.
+                                <br> <br>
+                                Liste des actions possibles :
+                                <br>
+                                [screen tableau]
+                                <br> <br>
+                                Liste des perceptions et états possibles de l'agent :
+                                <br>
+                                [screen tableau]
+                                <br> <br>
+                                🎾 Touches et informations en vrac sur le jeu
+                                <br>
+                                Touches du jeu :
+                                <br>
+                                ZQSD => déplacements, H => HUB, B => BALLE
+                                <br> <br>
+                                Mini-map :
+                                <br>
+                                La mini map est une vue de dessus 2D du jeu.
+                                <br>
+                                [capture ecran jeu et specifiquement la mini-map]
+                                <br>
+                                Le carré rouge correspond a ...........
+                                <br> <br>
+                                🎾 Idées non réalisées et pistes d'améliorations
+                                <br>
+                                ➤ menu
+                                <br>
+                                ➤ animation de la frappe de la balle
+                                <br>
+                                ➤ score
+                                <br> <br>
+                                🎾🎾🎾🎾🎾🎾🎾🎾🎾🎾🎾🎾🎾🎾🎾 <br>
+                                🎾 <u>Démonstration en direct</u> 🎾 <br>
+                                🎾🎾🎾🎾🎾🎾🎾🎾🎾🎾🎾🎾🎾🎾🎾
+                                <br> <br>
+                        </div>
 
                         <div class="calendrier" id="calendrier">
                             <p class="texte_antoine">Voir Trello</p> <br>
-                            <img src="/img/trello/CE_Trello_lundi20.png" alt="" width="400" height="1200"><br>
+                            <p class="texte_antoine">
+                                Trello : 
+                                <a href="https://trello.com/b/YGhNeYX3/projet-apprentissage-par-renforcement" target="_blank"> ici</a>
+                            </p>
                         </div>
 
                         <div class="projet" id="projet">
@@ -339,7 +450,7 @@
                                     Jeu de la vie : terminé. ✔️ <br>
                                     Animer des sprites : terminé. ✔️ <br>
                                     Chef d’œuvre : terminé. ✔️ <br>
-                                    Jeu avec apprentissage par renforcement : à faire. <br>
+                                    Jeu avec apprentissage par renforcement : terminé. ✔️ <br>
                                 </p>
                             </table>
                         </div>
