@@ -72,6 +72,9 @@ body {
 
 .gif {
     transition: .3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .gif:hover {
