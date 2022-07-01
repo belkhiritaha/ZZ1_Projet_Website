@@ -231,6 +231,13 @@ footer>div {
     padding: .3rem #ffffff;
 }
 
+.secondPrese .centrerItalique{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .example {
     width: 100% !important;
 }
