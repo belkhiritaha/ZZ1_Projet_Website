@@ -79,6 +79,7 @@ body {
 
 .gif:hover {
     transform: scale(1.75);
+    color: wheat;
 }
 
 
@@ -208,23 +209,6 @@ footer>div {
     }
 }
 
-.logs {
-    display: none;
-}
-
-.calendrier {
-    display: none;
-}
-
-.firstPrese {
-    display: none;
-}
-
-/* seconde présentation */
-
-.secondPrese {
-    display: none;
-}
 
 .p-2 .secondPrese{
     background-color: #11f53b8d;

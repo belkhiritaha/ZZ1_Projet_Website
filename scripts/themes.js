@@ -57,6 +57,7 @@ function brown() {
 }
 
 function show_logs(){
+    location.href = "travail_individuel.html";
     document.getElementById("logs").style.display = "block";
     document.getElementById("logs_btn").classList.add("active");
 
@@ -71,6 +72,7 @@ function show_logs(){
 }
 
 function show_calendrier(){
+    location.href = "calendrier.html";
     document.getElementById("calendrier").style.display = "block";
     document.getElementById("calendrier_btn").classList.add("active");
 
@@ -85,6 +87,7 @@ function show_calendrier(){
 }
 
 function show_projet(){
+    location.href = "index.html";
     document.getElementById("projet").style.display = "block";
     document.getElementById("projet_btn").classList.add("active");
 
@@ -99,6 +102,7 @@ function show_projet(){
 }
 
 function show_firstPrese(){
+    location.href = "premiere_presentation.html";
     document.getElementById("firstPrese").style.display = "block";
     document.getElementById("firstPrese_btn").classList.add("active");
 
@@ -113,6 +117,7 @@ function show_firstPrese(){
 }
 
 function show_secondPrese(){
+    location.href = "deuxieme_presentation.html";
     document.getElementById("secondPrese").style.display = "block";
     document.getElementById("secondPrese_btn").classList.add("active");
 
