@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/style1.css">
+    <link rel="stylesheet" type="text/css" href="../styles/style_column.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+    <div class="navbaar" style="position: fixed; top: 0; right: 0; left: 0; z-index: 10;">
+        <nav id="pleasenav" class="navbar navbar-expand-lg navbar-dark justify-content-between">
+            <a class="navbar-brand active" href="../index.html">~tabelkhiri</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../FactCheck/index.html">Fact Checker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../LoLImposter/index.php">LoL Imposters</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../SDL2Raycasting/index.html">SDL2 Raycasting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../ZZ1_Projet/index.html">ZZ1 Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+    </div>
+
+    <div class="row1">
+
+        <div id="sidebar" class="col-lg-2 d-none d-lg-block slider"
+            style="position: fixed; top: 5%; left: 0; z-index: 9; padding-top: 8%; height: 100%; overflow: hidden;">
+            <div class="log-container">
+                <div class="themes" style="text-align: left; position: absolute; bottom: 0;">
+                    <h6>Themes:</h6>
+                    <script type="text/javascript" src="../scripts/themes.js"></script>
+                    <div class="buttons" style="text-align: left;">
+                        <button type="submit" class="red" onclick="red()"></button>
+                        <button type="submit" class="yellow" onclick="yellow()"></button>
+                        <button type="submit" class="blue" onclick="blue()"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 align-items-center justify-content-center"
+            style="padding-right: 0% !important;">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <!-- particles.js container -->
+                <div id="particles-js">
+                    <script type="text/javascript" src="../scripts/particles.min.js"></script>
+                    <script type="text/javascript" src="../scripts/particles.js"></script>
+                </div>
+
+                <div class="d-flex flex-column">
+
+                    <h1 id="title">Projet apprentissage par renforcement</h1>
+                    <div class="buttons_row">
+                        <button type="submit" id="projet_btn" class="btn btn-primary" onclick="show_projet()">À propos</button>
+                        <button type="submit" id="logs_btn" class="btn btn-primary" onclick="show_logs()">Réalisations individuelles</button>
+                        <button type="submit" id="firstPrese_btn" class="btn btn-primary active" onclick="show_firstPrese()">Première présentation</button>
+                        <button type="submit" id="secondPrese_btn" class="btn btn-primary" onclick="show_secondPrese()">Deuxième présentation</button>
+                        <button type="submit" id="calendrier_btn" class="btn btn-primary" onclick="show_calendrier()">Calendrier</button>
+                    </div>
+                    <img src="../img/angle-down-solid.svg" class="scroll">
+
+                    <div class="p-2"
+                        style="background-color: rgba(10, 10, 10, 0.2); width: 96%; margin: auto; border: 3px solid rgba(20, 20, 20, 0.1);">
+
+                        <div class="firstPrese" id="firstPrese">
+
+                            <h1>Jeu de la vie : terminé. ✔️</h1>
+                            <p style="text-align: justify; text-justify: inter-word;" class="texte_antoine">
+                                <u>Forme de monde :</u> torique <br>
+                                <u>Règles d'évolution :</u> base de John Horton Conway <br> <br>
+                                <img class="gif" src="../img/GameOfLife/Git_GameOfLife.gif" alt="" width="100%" height="50%"> <br><br>
+                                <u>Organisation :</u> <br>
+                                Tous les membres du groupe ont fait la base du jeu de la vie (affichage de base, logique, etc)
+                                et nous avons ensuite prit le meilleur de chacun pour la version finale : <br>
+                                ➤ Taha a fait la grille torique, la détection des cycles et des états stables. <br>
+                                ➤ Marc a fait la sauvegarde dans un fichier. <br>
+                                ➤ Antoine a fait le chargement d'un fichier et le redimensionnement de la grille en cours de jeu
+                                (fonctionnalité non présente dans le jeu final car pleine écran). <br>
+                                <br>
+                                <u>Fonctionnalités réalisées :</u><br>
+                                ➤ configuration initiale entrée par l'utilisateur à la souris<br>
+                                ➤ possibilité de sauvegarder / charger une configuration<br>
+                                <img class="gif" src="../img/GameOfLife/CE_niveau.png" alt="" width="50%" height="50%">
+                                <img class="gif" src="../img/GameOfLife/CE_Charge.png" alt="" width="50%" height="50%"> <br>
+                                ➤ flèches du clavier pour accélérer / freiner l'animation<br>
+                                ➤ modification aisée des règles de transition <br>
+                                ➤ détection de "l'état est stable" qui affiche un message<br>
+                                <img class="gif" src="../img/GameOfLife/CE_GameOfLife_GameStable.png" alt="" width="100%" height="50%"> <br>
+                                ➤ [optionnel] détection de cycle (si taille de grille inf. à 7)<br><br>
+                                <u>Comment jouer :</u> <br>
+                                ↑ & ↓ : choix taille grille<br>
+                                <img class="gif" src="../img/GameOfLife/CE_GameOfLife_Menu_1.png" alt="" width="50%" height="50%">
+                                <img class="gif" src="../img/GameOfLife/CE_GameOfLife_Menu_2.png" alt="" width="50%" height="50%"> <br>
+                                → : avance l'animation <br>
+                                s : sauvegarde grille dans map.txt<br>
+                                x : quitte le jeu<br><br>
+                                <u>Comment lancer le programme :</u> <br>
+                                ➤ classique : ./run <br>
+                                Avec le mode classique on passe par le menu où on peut choisir la taille de la grille de jeu. La grille
+                                commence totalement vide.<br>
+                                ➤ chargement : ./run --tailleGrille --fichier <br>
+                                Avec ce mode, on se retrouve directement face au jeu. La grille a la taille --tailleGrille et est remplie
+                                avec le fichier --fichier. La taille --tailleGrille et la taille de la grille dans --tailleGrille est
+                                vérifiée. <br><br>
+                            </p>
+                            
+                            <h1>Chef d’œuvre : terminé. ✔️</h1>
+                            <p style="text-align: justify; text-justify: inter-word;" class="texte_antoine">
+                                <img class="gif" src="../img/Photo_Sam/Gif_MatPompier.gif" width="100%" height="50%" alt=""><br>
+                                <u>Objectifs du chef d’œuvre :</u> <br>
+                                Mettre en œuvre tout ce qui a été vu sur la SDL, en créant un mini jeu.
+                                Nous proposons un jeu totalement différent (validé par l'enseignant).
+                                Ce n'est qu'un exercice et il ne faudrait pas lui accorder plus d'une journée : nous avons passé 2 jours sur cet exercice.
+                                Notre jeu mets en œuvre une chaîne de Markov afin de gérer le comportement d'au moins un élément du jeu (le feu). <br> 
+                                <img class="gif" src="../img/Photo_Sam/Menu.png" width="100%" height="50%" alt=""><br> <br>
+                                <u>But du jeu :</u> <br>
+                                Empêcher la propagation du feu en éteignant les flammes avec vos seaux d'eau. <br> <br>
+                                <u>Chaîne de Markov :</u> <br>
+                                Notre chaîne de Markov se déploie sur le comportement du feu.
+                                Il y a 5 états pour un feu : <br>
+                                ➤ s'éteint <br>
+                                ➤ étincelle <br>
+                                ➤ petit feu <br>
+                                ➤ feu fort <br>
+                                ➤ se propage <br> <br>
+                                Un tableau de Markov pour l'évolution du feu peut être comme ceci : <br>
+                                <img src="../img/Photo_Sam/CE_TableauMarkov.png" width="100%" height="50%"> <br>
+                                Le tableau dans le programme est généré depuis le fichier texte markov.txt. <br> <br>
+                                Détaillons une ligne de ce tableau. Prenons la ligne Étincelle (1).
+                                Elle modélises qu'une Étincelle (1) à 30% de chance de rester une Étincelle (1) et
+                                70% de devenir un Petit feu (2). Nous avons remplis ce tableau afin d'approcher une 
+                                forme de comportement réel tout en donnant du challenge aux joueurs. <br> <br>
+                                <u>S'éteindre (0) et Se propage (4) :</u> <br>
+                                Un feu peut être éteint (0) et existé ! Il modélise un départ de feu soudain.
+                                L'état Se propage (4) modélise la multiplication du feu. Dans cet état, le feu
+                                a une probabilité uniforme de se propager en croix autour de lui. Il est effectivement
+                                créé s'il n'y a pas déjà un feu ou une source d'eau !
+                                <img class="gif" src="../img/Photo_Sam/feuavantspread.png" width="50%" height="50%" alt=""> 
+                                <br> devient: <br>
+                                <img class="gif" src="../img/Photo_Sam/feuapresspread.png" width="50%" height="50%" alt=""> 
+                                <br> <br>
+                                <u>Organisation de l'équipe :</u> <br>
+                                Nous avons travaillé avec Git et l'utilisation des branches. Nous avons rapidement
+                                séparé le travail comme suit : <br>
+                                ➤ Taha Belkhiri : toute la partie visuelle (carte, assets, menu, dessins, implémentations) et les animations. <br>
+                                ➤ Marc Beret : structure et mécanique du feu; chaîne de Markov; propagation du feu. <br>
+                                ➤ Antoine Meyer : logique du personnage (collisions); gestion du clic et de ses actions possibles. <br>
+                                <img class="gif" src="../img/Photo_Sam/CE_ArchiGit_Groupe.png" width="50%" height="50%" alt=""> →
+                                <img class="gif" src="../img/Photo_Sam/CE_orgaTravail.png" width="50%" height="50%" alt=""><br>
+                                <br>
+                                <u>Modélisation :</u> <br>
+                                Chaque élément du jeu doit être modélisé. Voilà nos modélisations (non exhaustives) de nos
+                                principaux éléments : <br>
+                                ➤ le pompier : position (x,y); nombre de seaux d'eau courant; vitesse de déplacement; nombre de points
+                                de vie courant; dernière fois qu'il a touché le feu. <br>
+                                ➤ le feu : position (x,y); état (étincelle, petit feu, etc).<br>
+                                ➤ liste chaînée des feux courants : structure de feu; pointeur sur chainon suivant. <br>
+                                ➤ la carte : générée depuis le fichier map.txt; dimension (20 cases par 20). <br>
+                                <br>
+                                <u>Animation :</u> <br>
+                                ➤ le pompier a 3 animations : Se déplace, Immobile et Vient de subir des brûlures.<br>
+                                ➤ le feu a différentes tailles suivant son état.<br>
+                                ➤ les points de vie ont une petite animation de mouvement.<br>
+                                <br>
+                                <u>Règles :</u> <br>
+                                ➤ éteindre le feu : Mat le pompier ne peut éteindre le feu que dans un rayon de
+                                une case autour de lui. Si jamais le joueur clique sur une case non accessible, il
+                                perd un seau d’eau inutilement donc attention ! <br>
+                                <img class="gif" src="../img/Photo_Sam/eteintproche.png" alt="">
+                                <img class="gif" src="../img/Photo_Sam/eteintloin.png" alt=""> <br>
+                                ➤ remplir les seaux : Quand Mat se trouve à une case de portée d’une
+                                source d’eau il peut remplir ses seaux en cliquant sur l’eau.<br>
+                                <img class="gif" src="../img/Photo_Sam/rechargeeau.png" alt="">
+                                <img class="gif" src="../img/Photo_Sam/fullEau.png" alt="">
+                                <img class="gif" src="../img/Photo_Sam/fullEaunon.png" alt=""><br>
+                                ➤ vie du pompier : Mat le pompier dispose de 3 point de vie. Il en perd
+                                un à chaque fois qu’il entre en collision avec un feu.<br>
+                                <img class="gif" src="../img/Photo_Sam/Fullvie.png" alt="">
+                                <img class="gif" src="../img/Photo_Sam/Fullvienon.png" alt=""><br>
+                                ➤ collisions : Mat le pompier ne peut pas traverser des arbres ou marcher sur l’eau.
+                                Il ne peut pas non plus sortir de la carte. <br>
+                                ➤ prochain feu : Un timer annonce la prochaine évolution des feux (vague de propagation
+                                du feu, augmentation du feu, diminution du feu, etc). <br>  
+                                <img class="gif" src="../img/Photo_Sam/feusuivant.png" alt=""><br>
+                                ➤ score : Chaque feu éteint correspond à un point. <br>
+                                <img class="gif" src="../img/Photo_Sam/score.png" alt=""><br>
+                                ➤ conditions de victoire : Mat gagne quand il a éteint tous les feux.
+                                Le score est le nombre de feux éteints : il doit être le plus petit possible.
+                                Nous n'avons pas eu le temps de faire un écran de victoire.. <br>
+                                ➤ conditions de défaite : Le joueur perd si Mat n'a plus aucuns points de vie.
+                                Il arrive alors sur un écran de défaite et peut choisir de recommencer une partie
+                                ou de quitter le jeu. <br>
+                                <img class="gif" src="../img/Photo_Sam/perdu.png" width="1000" height="600" alt="">
+                                <br> <br>
+                                <p class="texte_antoine" style="text-align: right;">🔥 Tous les feux sont éteints.</p>
+                                <br>
+                                
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
