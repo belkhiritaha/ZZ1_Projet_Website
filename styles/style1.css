@@ -228,8 +228,9 @@ footer>div {
 
 .buttons_row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10%;
+    grid-template-columns: repeat(5, 1fr);
+    white-space: nowrap;
+    grid-gap: 5%;
     margin-left:10%;
     margin-right: 10%;
     margin-top: 10%;
@@ -591,10 +592,10 @@ h2 {
 }
 
 #title {
-    margin-top: 15%;
+    margin-top: 10vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
-    font-size: 80px;
+    font-size: 7vw;
     letter-spacing: 1%;
     word-spacing: 2%;
     color: black;
