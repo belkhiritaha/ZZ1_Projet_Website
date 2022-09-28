@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/style1.css">
+    <link rel="stylesheet" type="text/css" href="../styles/style_column.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+    <div class="navbaar" style="position: fixed; top: 0; right: 0; left: 0; z-index: 10;">
+        <nav id="pleasenav" class="navbar navbar-expand-lg navbar-dark justify-content-between">
+            <a class="navbar-brand active" href="../index.html">~tabelkhiri</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../FactCheck/index.html">Fact Checker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../LoLImposter/index.php">LoL Imposters</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../SDL2Raycasting/index.html">SDL2 Raycasting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../ZZ1_Projet/index.html">ZZ1 Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../Instagram/index.html">Instagram Bot</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../TikTok/index.html">TikTok Bot</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+    </div>
+
+    <div class="row1">
+
+        <div id="sidebar" class="col-lg-2 d-none d-lg-block slider"
+            style="position: fixed; top: 5%; left: 0; z-index: 9; padding-top: 8%; height: 100%; overflow: hidden;">
+            <div class="log-container">
+                <div class="themes" style="text-align: left; position: absolute; bottom: 0;">
+                    <h6>Themes:</h6>
+                    <script type="text/javascript" src="../scripts/themes.js"></script>
+                    <div class="buttons" style="text-align: left;">
+                        <button type="submit" class="red" onclick="red()"></button>
+                        <button type="submit" class="yellow" onclick="yellow()"></button>
+                        <button type="submit" class="blue" onclick="blue()"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 align-items-center justify-content-center"
+            style="padding-right: 0% !important;">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <!-- particles.js container -->
+                <div id="particles-js">
+                    <script type="text/javascript" src="../scripts/particles.min.js"></script>
+                    <script type="text/javascript" src="../scripts/particles.js"></script>
+                </div>
+
+                <div class="d-flex flex-column">
+
+                    <h2 id="title">Instagram Bot</h2>
+                    <img src="../img/angle-down-solid.svg" class="scroll">
+
+                    <div class="p-2"
+                        style="background-color: rgba(10, 10, 10, 0.2); width: 96%; margin: auto; border: 3px solid rgba(20, 20, 20, 0.1);">
+
+
+                        <p>A bot that promotes e-commerces on Instagram</p>
+                        <div class="Who">
+                            <h1>Concept</h1>
+                            <p>
+                                Given a set of accounts, this bot will log in to each account and post comments that help promotes your e-commerce page on popular/related hashtags.
+                                <br>
+                                The bot keeps track of the number of posts made and will stop after reaching the maximum number of posts. Also, it will not comment on previously commented posts.
+                                The bot also comes with a basic Tkinter GUI that allows you to change the hashtags, the number of posts to make, and the time between posts.
+                            </p>
+                        </div>
+
+                        <h1>Selenium</h1>
+                        <p>
+                            The bot uses Selenium to log in to each account and post comments.
+                            <br>
+                        </p>
+
+                        <br>
+
+                        <h1>Account creation</h1>
+                        <p>
+                            There's also a semi automated account creation feature that will make creating account easier (T.O.S friendly).
+                            <br>
+                        </p>
+
+                        <p>The template for the posts looks like this</p>
+                        </p>
+
+                        <div class="contimg">
+                            <div>
+                                <div class="example container">
+                                    <img src="../img/topic.png" alt="Avatar" class="gif example image">
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <h1>gTTS</h1>
+                        <p>gTTS is a Python library that allows us to create speech from text.
+                            <br>
+                            It is based on the Google Translate API.
+                            <br>
+                            We use it to create speech from the text we want to put into the video.
+                        </p>
+
+                        <br>
+
+
+                        <h1>moviepy</h1>
+                        <p>Once we assemble everything together, we use moviepy to create the video.
+                            <br>
+                            It is a Python library that allows us to create and edit videos.
+                            <br>
+                        </p>
+
+                        <div class="contimg">
+                            <div>
+                                <div class="example container">
+                                    <img src="../img/screenshot.png" alt="Avatar" class="gif example image">
+                                </div>
+                            </div>
+                            <p>The final product</p>
+                        </div>
+
+
+
+                        <a target="_blank" href="https://github.com/belkhiritaha/RedditTTS">
+                            <img src="../img/25231.png" class ="link_image">
+                        </a>
+                        <p>(Source code)</p>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>
