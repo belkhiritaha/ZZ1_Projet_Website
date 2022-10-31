@@ -4,7 +4,7 @@ import logo from './logo.svg';
 
 function MyCard() {
   return (
-    <Card style={{ width: '30rem' }}>
+    <Card>
       <Card.Img variant="top" src={logo} />
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
