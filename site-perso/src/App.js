@@ -1,67 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
-import { Row } from 'react-bootstrap';
+import { Button, Collapse, Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/fontawesome-free'
-import MyNavBar from './navbar.js';
-import CardGroup from 'react-bootstrap/CardGroup';
-import MyCard from './card';
+import useConsole from './console';
 
 function App() {
+    useConsole();
     return (
         <>
-        <MyNavBar></MyNavBar>
 
-        <h1 style={{textAlign: "center"}}>~tabelkhiri</h1>
+            <div style={{ width: '100%', marginTop: 'auto' }} className='console-container'><span id='text'></span><div className='console-underscore' id='console'>&#95;</div></div>
 
-        <div className="whoami">
-            <Col>
+            <div className="whoami">
                 <Col>
-                    <h2>$ whoami</h2>
-                    <p>Hi, I'm <b>Abdulrahman</b> and I'm a <b>Software Engineer</b> based in <b>San Francisco Bay Area</b>. I'm currently working at <b>Google</b> as a <b>Software Engineer</b>. I'm also a <b>Computer Science</b> graduate from <b>San Jose State University</b>.</p>
+                    <Col>
+                        <h2>$ whoami </h2>
+                        <p className="description">Hi, I'm <b>Taha</b> and I'm a <b>Networks and Cybersecurity Student</b> at <b>Clermont Auvergne INP ISIMA</b>. I'm currently looking for a <b>4 to 6 months internship</b>.</p>
+                    </Col>
+
+                    <Col>
+                        <h2>$ more</h2>
+                        <p className="description">21 years old, <b>Moroccan</b>, interested in <b>cybersecurity</b>, <b>networks</b> and <b>CTFs</b>. You'll find all of my <b>projects</b> and <b>writeups</b> on this website.</p>
+                    </Col>
+
+                    <Col>
+                        <h2>$ more | grep hobbies</h2>
+                        <p className="description">I like <b>hacking</b>, <b>coding</b>, <b>gaming</b>, <b>playing chess</b> and <b>listening to music</b><span className='blink'>_</span></p>
+                    </Col>
                 </Col>
+            </div>
 
-                <Col>
-                    <h2>$ find / -name "resume" 2>/dev/null</h2>
-                    <p>I'm currently living in <b>San Francisco Bay Area</b>. I'm originally from <b>San Jose, CA</b>.</p>
-                </Col>
+            <Button style={{ width: "20vw", marginLeft: "40vw", marginTop: "10vh" }} variant="success" size="lg" block >
+                <span style={{ color: 'white' }}>Learn more</span>
+            </Button>
 
-                <Col>
-                    <h2>$ whatami</h2>
-                    <p>I'm a <b>Software Engineer</b> with a passion for <b>Web Development</b>. I'm also a <b>Computer Science</b> graduate from <b>San Jose State University</b>.</p>
-                </Col>
-            </Col>
-        </div>  
-            
-        <div className="App">
+        </>
 
-
-
-
-
-
-            <CardGroup>
-                <Row className="g-4" style={{margin: "auto"}}>
-                    <Col>
-                        <MyCard></MyCard>
-                    </Col>
-                    <Col>
-                        <MyCard></MyCard>
-                    </Col>
-                </Row>
-                <Row className="g-4" style={{margin: "auto"}}>
-                    <Col>
-                        <MyCard></MyCard>
-                    </Col>
-                    <Col>
-                        <MyCard></MyCard>
-                    </Col>
-                </Row>
-            </CardGroup>
-        </div>
-    </>
-    
-  );
+    );
 }
 
 export default App;

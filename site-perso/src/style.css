@@ -1,0 +1,74 @@
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99vw;
+    height: 100vh;
+    background: repeating-linear-gradient(#0000004b, #0000004b 1px, transparent 2px, transparent 5px);
+    z-index: -1;
+}
+
+#root {
+    height: 80vh;
+    margin-top: 15vh;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+.whoami {
+    font-size: 1.5em;
+    width: 80%;
+    margin: auto;
+}
+
+h1 h2 h3 h4 h5 h6 {
+    font-family: 'Khula', sans-serif;
+}
+
+
+* {
+    font: Inconsolata, monospace;
+    color: white;
+    text-shadow: 0 0 5px #C8C8C8;
+}
+
+
+.description {
+    font-size: 1.5em;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.console-container {
+
+    font-family: Khula;
+    text-align: center;
+    font-size: 700%;
+    margin: auto;
+}
+
+.console-underscore {
+    display: inline-block;
+    position: relative;
+    top: -0.14em;
+    left: 10px;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
