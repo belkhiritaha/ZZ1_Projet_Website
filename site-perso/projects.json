@@ -1,0 +1,36 @@
+{
+    "projects": [
+        {
+            "name": "Fact Checker",
+            "description": "A python program that checks if a given statement is true or false."
+        },
+        {
+            "name": "LoL Imposters",
+            "description": "A Discord bot that adds a fun twist to the popular game League of Legends."
+        },
+        {
+            "name": "SDL2 Raycasting",
+            "description": "A raycasting engine written in C using SDL2."
+        },
+        {
+            "name": "ZZ1 Project",
+            "description": "The final project for the ZZ1 year at ISIMA."
+        },
+        {
+            "name": "ZZ2 Project",
+            "description": "The final project for the ZZ2 year at ISIMA."
+        },
+        {
+            "name": "Instagram Bot",
+            "description": "A bot that promotes Instagram e-commerce accounts."
+        },
+        {
+            "name": "TikTok/Reddit Bot",
+            "description": "A bot that turns popular Reddit threads into TTS TikTok videos."
+        },
+        {
+            "name": "Kamagoshark",
+            "description": "A 3D game made in JavaSript."
+        }
+    ]
+}

@@ -78,13 +78,17 @@ function Menu(){
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild( renderer.domElement );
     
-    // set renderer background to transparent
     renderer.setClearColor( 0x000000, 0 );
     
-    // const geometry = new THREE.BoxGeometry();
-    // const material = new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe: true } );
-    // const cube = new THREE.Mesh( geometry, material );
-    // scene.add( cube );
+    // add wireframe plane
+    const geometry = new THREE.PlaneGeometry( 400, 100, 100, 100 );
+    const material = new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe: true } );
+    const plane = new THREE.Mesh( geometry, material );
+    // rotate
+    plane.rotation.x = Math.PI / 2 - 0.1;
+    plane.position.y = -5;
+    scene.add( plane );
+
 
     const objects = [];
 
@@ -119,6 +123,7 @@ function Menu(){
 
 
     camera.position.z = 5;
+    camera.position.y = -1;
     // set camera to look at 0 0 0
     camera.lookAt(0, 0, 0);
     
@@ -126,7 +131,7 @@ function Menu(){
     
     const bloomPass = new UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 );
     bloomPass.threshold = 0;
-    bloomPass.strength = 1.5;
+    bloomPass.strength = 0.55;
     bloomPass.radius = 0;
     
     const composer = new EffectComposer( renderer );
@@ -156,18 +161,18 @@ function Menu(){
     function slideRight(){
         // select by id
         let text = document.getElementById('text');
-        text.style = 'color: 0x00ff00 !important; font-size: 2rem; position: absolute; top: 50%; left: 5%; transform: translate(-50%, -50%); background-color: transparent;  transition: 1s; animation: fadeOut 2s ease-in-out;';
+        text.style = 'color: 0x00ff00 !important; font-size: 2rem; position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); background-color: transparent; animation: fadeOut 2s ease-in-out;';
         
         let description = document.getElementById('description');
-        description.style = 'color: 0x00ff00 !important; font-size: 1rem; position: absolute; top: 85%; left: 5%; transform: translate(-50%, -50%); background-color: display: none; transparent; transition: 2s; animation: fadeOut 2s ease-in-out;';
+        description.style = 'color: 0x00ff00 !important; font-size: 1rem; position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); background-color: transparent; animation: fadeOut 2s ease-in-out;';
 
         setTimeout(() => {
             text.innerHTML = projects.projects[currentState].name;
-            description.innerHTML = projects.projects[currentState].description;
-            text.style = 'color: 0x00ff00 !important; font-size: 2rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: transparent;';
-            description.style = 'color: 0x00ff00 !important; font-size: 1rem; position: absolute; top: 85%; left: 50%; transform: translate(-50%, -50%); background-color: transparent;';
+            description.innerHTML = projects.projects[currentState].description + "<span className='blink'>_</span>";
+            text.style = 'color: 0x00ff00 !important; font-size: 2rem; position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); background-color: transparent;';
+            description.style = 'color: 0x00ff00 !important; font-size: 1rem; position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); background-color: transparent;';
         }
-        , 1000);
+        , 2000);
 
         // move camera
         let old = camera.position.x;
@@ -188,18 +193,18 @@ function Menu(){
     function slideLeft(){
         // select by id
         let text = document.getElementById('text');
-        text.style = 'color: 0x00ff00 !important; font-size: 2rem; position: absolute; top: 50%; left: 95%; transform: translate(-50%, -50%); background-color: transparent; transition: 2s; animation: fadeOut 2s ease-in-out;';
+        text.style = 'color: 0x00ff00 !important; font-size: 2rem; position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); background-color: transparent; animation: fadeOut 2s ease-in-out;';
 
         let description = document.getElementById('description');
-        description.style = 'color: 0x00ff00 !important; font-size: 1rem; position: absolute; top: 85%; left: 95%; transform: translate(-50%, -50%); background-color: transparent; transition: 2s; animation: fadeOut 2s ease-in-out;';
+        description.style = 'color: 0x00ff00 !important; font-size: 1rem; position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); background-color: transparent; animation: fadeOut 2s ease-in-out;';
 
         setTimeout(() => {
             text.innerHTML = projects.projects[currentState].name;
-            description.innerHTML = projects.projects[currentState].description;
-            text.style = 'color: 0x00ff00 !important; font-size: 2rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: transparent;';
-            description.style = 'color: 0x00ff00 !important; font-size: 2rem; position: absolute; top: 85%; left: 50%; transform: translate(-50%, -50%); background-color: transparent;';
+            description.innerHTML = projects.projects[currentState].description + "<span className='blink'>_</span>";
+            text.style = 'color: 0x00ff00 !important; font-size: 2rem; position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); background-color: transparent;';
+            description.style = 'color: 0x00ff00 !important; font-size: 1rem; position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); background-color: transparent;';
         }
-        , 1000);
+        , 2000);
 
         // move camera
         let old = camera.position.x;
@@ -264,8 +269,12 @@ function Menu(){
                 }
 
                 #root{
-                    width: 0vw;
-                    height: 0vh;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    margin-top: 0 !important;
                 }
 
                 body {
@@ -292,13 +301,65 @@ function Menu(){
                         opacity: 0;
                     }
                 }
+
+                .terminal {
+                    position: absolute;
+                    top: 70%;
+                    left: 30%;
+                    width: 40vw;
+                    height: 30vh;
+                    background-color: rgba(50, 50, 50, 0.5);
+                    color: white;
+                    font-family: monospace;
+                    font-size: 1rem;
+                    overflow: hidden;
+                    z-index: 100;
+                }
+
+                .terminal-top {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 10%;
+                    background-color: rgba(30, 30, 30, 1);
+                    color: white;
+                    font-family: monospace;
+                    font-size: 1rem;
+                    overflow: hidden;
+                    z-index: 100;
+                }
+
+                .tip {
+                    position: absolute;
+                    top: 0;
+                    left: 70%;
+                    width: 20%;
+                    height: 10%;
+                    background-color: rgba(30, 30, 30, 0.5);
+                    color: white;
+                    font-family: monospace;
+                    font-size: 1rem;
+                    overflow: hidden;
+                    z-index: 100;
+                }
                 
             `}
         </style>
 
-        <h1 style={{ position: "absolute", top: "20%", left: "50%", transform: "translate(-50%,-50%)" }} id="title">Projects</h1>
-        <p style={{ color: "0x00ff00 !important", fontSize: "2rem", position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", backgroundColor: "transparent" }} id="text">{projects.projects[currentState].name}</p>
-        <p style={{ color: "0x00ff00 !important", fontSize: "1rem", position: "absolute", top: "85%", left: "50%", transform: "translate(-50%, -50%)", backgroundColor: "transparent" }} id="description">{projects.projects[currentState].description}</p>
+        <h1 style={{ position: "absolute", top: "10%", left: "50%", transform: "translate(-50%,-50%)", fontSize: "3rem" }} id="title">Projects<span className='blink'>_</span></h1>
+
+        <div className='terminal'>
+            <div className='terminal-top'>
+                <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}>Terminal</div>
+                <button style={{ position: "absolute", top: "50%", left: "90%", transform: "translate(-50%,-50%)", backgroundColor: "transparent", border: "none", outline: "none" }}>X</button> 
+            </div>
+            <p style={{ color: "0x00ff00 !important", fontSize: "2rem", position: "absolute", top: "30%", left: "50%", transform: "translate(-50%, -50%)", backgroundColor: "transparent" }} id="text">{projects.projects[currentState].name}</p>
+            <p style={{ color: "0x00ff00 !important", fontSize: "1rem", position: "absolute", top: "55%", left: "50%", transform: "translate(-50%, -50%)", backgroundColor: "transparent" }} id="description">{projects.projects[currentState].description}<span className='blink'>_</span></p>            
+        </div>
+        <div className='tip'>
+            <p style={{ color: "0x00ff00 !important", fontSize: "1rem", position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", backgroundColor: "transparent" }}>Press Enter to learn more</p>
+        </div>
         </>
     );
 }

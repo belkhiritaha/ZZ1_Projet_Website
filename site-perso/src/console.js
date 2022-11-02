@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 function consoleText(words, id, colors) {
     document.body.style = 'background: #111;';
     document.body.style = "width: 100vw;"
-    document.body.style = "background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%)";
+    document.body.style = "background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 90%)";
     if (colors === undefined) colors = ['#fff'];
     var visible = true;
     var con = document.getElementById('console');
